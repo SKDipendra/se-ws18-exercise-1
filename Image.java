@@ -24,8 +24,10 @@ public class Image {
 		position=x*width*3+y*3;
 		//colors pixels with lower 24 bit rgb
 		data[position]=(byte)((val &  0xFF0000)>>16); 
-		data[position+1]=(byte)((val & 0x008000)>>8);
-		data[position+2]=(byte)(val & 0x0000FF);	
+		data[position+1]=(byte)((val & 0xFF00)>>8);
+		data[position+2]=(byte)(val & 0xFF);
+		
+
 
 	}
 
